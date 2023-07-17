@@ -1,0 +1,29 @@
+id: kafka_step2_directories
+learningObjectives:
+  - Learn about the configuration and scripts directories.
+hints:
+  - Use `docker ps` to find the container ID or name.
+  - Use `docker exec -it <container-id-or-name> bash` to access the Kafka
+    container.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Great job!
+          - text: Now that Kafka is running, let's learn about the configuration and scripts
+              directories. The configuration directory contains all the
+              configuration files for Kafka and Zookeeper, while the scripts
+              directory has various utility scripts for managing Kafka.
+          - text: With Docker, you can use `docker exec` to get access to the Kafka
+              container and explore these directories. Locate both the
+              configuration and scripts directories.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

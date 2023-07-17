@@ -1,0 +1,35 @@
+id: kafka_step4_data
+learningObjectives:
+  - Produce and consume topic data.
+hints:
+  - Use `kafka-console-producer.sh` to produce messages to the topic.
+  - Use `kafka-console-consumer.sh` to consume messages from the topic.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: With our topic in place, let's learn how to produce and consume data from
+              it.
+          - text: Using the appropriate scripts from the scripts directory, produce a
+              message containing an example order to the 'anythink-orders'
+              topic, then consume the message from the same topic.
+          - text: Verification comes from successfully producing and consuming a message.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Fantastic! You have completed the Intro to Kafka quest. You now have a
+                solid understanding of running Kafka using Docker, working with
+                its configuration and scripts directories, managing topics, and
+                producing and consuming topic data. You're ready to tackle more
+                advanced Kafka projects at Anythink. Great work!
+      - actionId: finish_step

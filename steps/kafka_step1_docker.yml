@@ -1,0 +1,29 @@
+id: kafka_step1_docker
+learningObjectives:
+  - Run Kafka using Docker.
+hints:
+  - Use `docker pull confluentinc/cp-kafka` to pull the Kafka Docker image.
+  - Use `docker run` command to run the container with proper port mapping.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Hey, it's Lucca. Ness has asked us to get familiar with Kafka.
+          - text: For those who don’t know, Apache Kafka is an open-source, distributed
+              streaming platform. It’s useful for building real-time data
+              pipelines and streaming apps, like the ones we use here at
+              Anythink.
+          - text: To get started, let's run Kafka using Docker, as it'll allow easily manage
+              containers and keep our environment clean. Pull the official Kafka
+              Docker image 'confluentinc/cp-kafka' and run it, making sure that
+              ports are properly mapped.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

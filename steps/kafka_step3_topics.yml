@@ -1,0 +1,26 @@
+id: kafka_step3_topics
+learningObjectives:
+  - List and create Kafka topics.
+hints:
+  - You can use the `kafka-topics.sh` script to manage Kafka topics.
+  - To create a new topic, use the `--create` flag with `kafka-topics.sh` and
+    specify the topic name.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Nice work! Time to dive into Kafka topics.
+          - text: Topics are a way to categorize the messages in Kafka, making it easier to
+              manage the data streams.
+          - text: Using one of the scripts you found in the scripts directory, list all the
+              existing topics and create a new topic called 'anythink-orders'.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step

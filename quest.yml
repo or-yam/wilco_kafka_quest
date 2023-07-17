@@ -1,0 +1,25 @@
+id: intro_to_kafka
+title: Introduction to Kafka
+subtitle: "Master Kafka fundamentals: Learn Docker, Directories, Topics & Data"
+description: In this quest, you'll gain a solid understanding of Apache Kafka,
+  by learning how to run Kafka using Docker, understand configuration and
+  scripts directories, create and list topics, and produce and consume topic
+  data. This will give you the essential skills needed to work effectively with
+  Kafka in Anythink and other real-world applications.
+summary: Well done! In this quest, you learned how to run Kafka using Docker,
+  explored configuration and scripts directories, created and listed topics, and
+  produced and consumed topic data. These foundational skills prepare you to
+  work effectively with Apache Kafka in a variety of applications.
+level: intermediate
+skills:
+  - backend
+  - devops
+  - operations
+steps:
+  - kafka_step1_docker
+  - kafka_step2_directories
+  - kafka_step3_topics
+  - kafka_step4_data
+type: tutorial
+duration: 2
+repository: https://github.com/trywilco/Anythink-Market-Public
