@@ -1,4 +1,4 @@
-id: kafka_step3_topics
+id: kafka_step5_topics
 learningObjectives:
   - List and create Kafka topics.
 hints:

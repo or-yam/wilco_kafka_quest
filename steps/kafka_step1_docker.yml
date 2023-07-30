@@ -16,9 +16,9 @@ startFlow:
               pipelines and streaming apps, like the ones we use here at
               Anythink.
           - text: To get started, let's run Kafka using Docker, as it'll allow easily manage
-              containers and keep our environment clean. Pull the official Kafka
-              Docker image 'confluentinc/cp-kafka' and run it, making sure that
-              ports are properly mapped.
+              containers and keep our environment clean. Clone [this repo](https://github.com/wurstmeister/kafka-docker)
+              and run the docker-compose.yml file.
+              When you done, check that the docker containers are running.
     - actionId: ready_message
       params:
         person: lucca

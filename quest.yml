@@ -1,6 +1,6 @@
 id: intro_to_kafka
 title: Introduction to Kafka
-subtitle: "Master Kafka fundamentals: Learn Docker, Directories, Topics & Data"
+subtitle: 'Master Kafka fundamentals: Learn Docker, Directories, Topics & Data'
 description: In this quest, you'll gain a solid understanding of Apache Kafka,
   by learning how to run Kafka using Docker, understand configuration and
   scripts directories, create and list topics, and produce and consume topic
@@ -18,8 +18,9 @@ skills:
 steps:
   - kafka_step1_docker
   - kafka_step2_directories
-  - kafka_step3_topics
+  - kafka_step3_questions
   - kafka_step4_data
+  - kafka_step5_topics
 type: tutorial
 duration: 2
-repository: https://github.com/trywilco/Anythink-Market-Public
+repository: https://github.com/or-yam/kafka-docker

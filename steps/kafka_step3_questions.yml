@@ -1,0 +1,47 @@
+id: kafka_step3_questions
+learningObjectives:
+  - Learn about the configuration and scripts directories.
+hints:
+  - Use `docker ps` to find the container ID or name.
+  - Use `docker exec -it <container-id-or-name> bash` to access the Kafka
+    container.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: :codeInstruction[What is the configuration directory?]
+trigger:
+  type: user_message
+  params:
+    person: lucca
+
+  flowNode:
+    if:
+      conditions:
+        - conditionId: text_match_regex
+          params:
+            text: '${userMessageText}'
+            regex: config
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: keen
+              messages:
+                - text: https://i.gifer.com/77g5.gif
+                  delay: 1300
+                - text: My thoughts exactly 🚀
+                  delay: 1300
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: keen
+              messages:
+                - text: https://c.tenor.com/HytjLojMh2IAAAAM/sussyfurby.gif
+                  delay: 2500
+                - text: mmm... not what I had in mind...
+                  delay: 2500
